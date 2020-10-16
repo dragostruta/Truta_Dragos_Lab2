@@ -5,8 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Truta_Dragos_Lab2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="Virtual Doughnuts Factory" Height="450" Width="800" ResizeMode="NoResize" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+    <Grid Margin="0,0,0,-6">
+        <Label x:Name="lblTitle" Content="Doughnuts - Bake &amp; Sale" HorizontalAlignment="Left" Margin="242,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.513,0.692" FontSize="24" FontWeight="Bold"/>
+        <GroupBox x:Name="gbRaised" Header="Raised" FontWeight="Bold" Margin="141,108,446,160" RenderTransformOrigin="0.479,0.488"/>
+        <GroupBox x:Name="gbFilled" Header="Filled" FontWeight="Bold" Margin="400,98,118,146" RenderTransformOrigin="0.479,0.488"/>
+        <Label x:Name="lblGlazedRaised" Content=" Glazed" HorizontalAlignment="Left" Margin="141,132,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.513,0.692" FontWeight="Bold"/>
+        <TextBox x:Name="txtGlazedRaised" HorizontalAlignment="Left" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" IsReadOnly="True" Height="22" RenderTransformOrigin="0.408,0.609" Margin="287,139,0,0"/>
+        <Label x:Name="lblSugarRaised" HorizontalAlignment="Left" Margin="141,177,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.513,0.692" FontWeight="Bold" Height="35" Width="56" Content="Sugar"/>
+        <TextBox x:Name="txtSugarRaised" HorizontalAlignment="Left" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" IsReadOnly="True" Height="22" RenderTransformOrigin="0.408,0.609" Margin="287,180,0,0"/>
+        <Label x:Name="lblLemonFilled" Content="Lemon" HorizontalAlignment="Left" Margin="414,122,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.513,0.692" FontWeight="Bold"/>
+        <Label x:Name="lblChocolateFilled" Content="Chocolate" HorizontalAlignment="Left" Margin="414,156,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.513,0.692" FontWeight="Bold"/>
+        <Label x:Name="lblVanillaFilled" Content="Vanilla" HorizontalAlignment="Left" Margin="415,193,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.513,0.692" FontWeight="Bold"/>
+        <TextBox x:Name="txtLemonFilled" HorizontalAlignment="Left" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" IsReadOnly="True" Height="22" RenderTransformOrigin="0.408,0.609" Margin="616,123,0,0"/>
+        <TextBox x:Name="txtChocolateFilled" HorizontalAlignment="Left" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" IsReadOnly="True" Height="22" RenderTransformOrigin="0.408,0.609" Margin="616,158,0,0"/>
+        <TextBox x:Name="txtVanillaFilled" HorizontalAlignment="Left" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" IsReadOnly="True" Height="22" RenderTransformOrigin="0.408,0.609" Margin="616,196,0,0"/>
+        <GroupBox x:Name="gbSale" Header="Current Sale" FontWeight="Bold" Margin="141,299,118,29" RenderTransformOrigin="0.479,0.488"/>
+        <Label x:Name="lblQuantity" Content="Quantity" HorizontalAlignment="Left" Margin="150,310,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.513,0.692" FontWeight="Bold"/>
+        <TextBox x:Name="txtQuantity" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Height="22" RenderTransformOrigin="0.408,0.609" Margin="214,315,0,0"/>
+        <Label x:Name="lblType" Content="Type" HorizontalAlignment="Left" Margin="270,313,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.513,0.692" FontWeight="Bold"/>
+        <ComboBox x:Name="cmbType" HorizontalAlignment="Left" Margin="319,320,0,104" Width="120"/>
+        <Label x:Name="lblPrice" Content="Price" HorizontalAlignment="Left" Margin="447,315,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.513,0.692" FontWeight="Bold"/>
+        <TextBox x:Name="txtPrice" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="44" IsReadOnly="True" Height="22" RenderTransformOrigin="0.408,0.609" Margin="490,317,0,0"/>
+        <ListBox x:Name="lstSale" Margin="169,344,280,59"/>
+        <Label x:Name="lblTotal" Content="Total" HorizontalAlignment="Left" Margin="362,381,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.513,0.692" FontWeight="Bold"/>
+        <TextBox x:Name="txtTotal" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" IsReadOnly="True" Height="18" RenderTransformOrigin="0.408,0.609" Margin="405,385,0,0"/>
+        <Button x:Name="btnAddToSale" Content="Add to Sale" HorizontalAlignment="Left" Margin="571,323,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnRemoveItem" Content="Remove Item" HorizontalAlignment="Left" Margin="571,348,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnCheckOut" Content="Check Out" HorizontalAlignment="Left" Margin="571,381,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top"
+Width="131" Margin="0,21,0,0">
+            <MenuItem Header="File">
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="_Doughnuts">
+                <MenuItem Header="Make">
+                    <MenuItem Header="Raised">
+                        <MenuItem x:Name="glazedMenuItem" Header="Glazed"/>
+                        <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
+                    </MenuItem>
+                    <MenuItem Header="Filled"/>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>
